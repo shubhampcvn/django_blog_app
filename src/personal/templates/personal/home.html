@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>This is Home.html</h1>
-{% for account in accounts %}
-    <p>{{ account }}</p>
-{% endfor %}
-
-
+<h1>Registered Users</h1>
+<div class="container">
+    <ol>
+        {% for account in accounts %}
+            <li>{{ account }}</li>
+        {% endfor %}
+    </ol>
+</div>
 {% endblock %}
