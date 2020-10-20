@@ -2,26 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>This is title</title>
-    {% if request.user.is_authenticated %}
-        <p>
-            <a href="{% url 'logout' %}">Logout</a> | <a href="{% url 'account' %}">Account</a>
-            <br><br>
-               Hi {{ request.user.username }}
-        </p>
-
-    {% else %}
-    <p><a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a></p>
-
-    {% endif %}
-
+    <title>My App</title>
+    {% include 'snippets/header.html' %}
 </head>
 <body>
     {% block content %}
     {% endblock %}
 </body>
 <footer>
-   <hr>
-    This is footer
+    {% include 'snippets/footer.html' %}
 </footer>
 </html>

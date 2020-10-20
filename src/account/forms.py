@@ -50,4 +50,4 @@ class AccountUpdateForm(forms.ModelForm):
                 account = Account.objects.exclude(pk=self.instance.pk).get(username=username)
             except Account.DoesNotExist:
                 return username
-            raise forms.ValidationError('Usernmae "%s" is already in use.'%username)
+            raise forms.ValidationError('Username "%s" is already in use.'%username)
