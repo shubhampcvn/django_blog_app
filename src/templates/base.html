@@ -7,7 +7,7 @@
         <p>Hi {{ request.user.username }} | <a href="{% url 'logout' %}">Logout</a> </p>
 
     {% else %}
-    <p><a href="{% url 'register' %}">Register</a> | <a href="#">Login</a></p>
+    <p><a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a></p>
 
     {% endif %}
 
