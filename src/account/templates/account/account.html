@@ -32,4 +32,18 @@
     <a href="{% url 'password_change' %}"> Change Password </a>
 </form>
 </div>
+
+<div class="d-flex">
+    {% if blog_posts %}
+    <ol>
+        {% for post in blog_posts %}
+        <li><a href="{% url 'blog:detail' post.slug %}">{{ post }}</a></li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <p>You don't have any post.</p>
+    <a href="{% url 'blog:create' %}"> Create new post</a>
+    {% endif %}
+</div>
+
 {% endblock %}
